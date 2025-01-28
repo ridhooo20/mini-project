@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabut aja ini mah</title>
+
+    <style>
+      body {
+        background-color: rgb(246, 172, 172);
+        color: black;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-weight: 700;
+      }
+
+      * {
+        outline: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+      }
+
+      img {
+        display: flex;
+        margin: auto;
+        padding-top: 5rem;
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+      }
+
+      #button {
+        margin-top: 40px;
+      }
+
+      button {
+        width: 130px;
+        height: 60px;
+        font-size: larger;
+        border-radius: 25px;
+        cursor: pointer;
+        border: none;
+        margin-top: 30px;
+      }
+
+      #sayang {
+        margin-left: 450px;
+      }
+
+      #gak {
+        position: fixed;
+        margin-left: 100px;
+      }
+
+      button:hover {
+        background-color: pink;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="assets/gif/shy-cute.gif" />
+    <h1>Kamu sayang sama aku gak?</h1>
+
+    <button id="sayang">Sayang</button>
+    <button id="gak">Gak</button>
+
+    <script>
+      const gak = document.getElementById("gak");
+      const sayang = document.getElementById("sayang");
+      const h1 = document.querySelector("h1")
+      const img = document.querySelector("img")
+
+
+      const width = window.innerWidth - 300;
+      const height = window.innerHeight - 200;
+
+      gak.addEventListener("click", function () {
+        const random = Math.random();
+        const randomWidth = random * width;
+        const randomHeight = random * height;
+        gak.style.left = randomWidth + "px";
+        gak.style.top = randomHeight + "px";
+      });
+
+
+      sayang.addEventListener("click", function () {
+        h1.textContent = "makasiii, aku juga sayang kamu"
+        gak.style.display = "none"
+        sayang.style.display = "none"
+        img.src = "assets/gif/tkthao219-bubududu (1).gif"
+      })
+
+    </script>
+  </body>
+</html>
