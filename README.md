@@ -1,1 +1,2 @@
-ini repositoryku untuk menyimpan source code mini project ku
+Project Drawing 
+*buat latih logic doang
